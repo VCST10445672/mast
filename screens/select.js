@@ -14,10 +14,10 @@ const sixWeekCourses = [
   { id: '7', name: 'Garden Maintenance', price: 750 },
 ];
 
-const SelectScreen = ({ navigation }) => {
+const SelectScreen = ({ navigation }) => {    //The IIE, 2024
   const [selectedCourses, setSelectedCourses] = useState([]);
 
-  const toggleCourse = (course) => {
+  const toggleCourse = (course) => {    devCamp[s.a.]
     setSelectedCourses((prevSelected) =>
       prevSelected.includes(course.id)
         ? prevSelected.filter((id) => id !== course.id)
@@ -25,28 +25,28 @@ const SelectScreen = ({ navigation }) => {
     );
   };
 
-  const calculateTotal = () => {
+  const calculateTotal = () => {    //The IIE, 2024
     return selectedCourses.reduce((total, courseId) => {
       const course = [...sixMonthCourses, ...sixWeekCourses].find((c) => c.id === courseId);
       return total + (course ? course.price : 0);
     }, 0);
   };
 
-  const calculateDiscount = (total) => {
+  const calculateDiscount = (total) => {    //The IIE, 2024
     if (selectedCourses.length === 1) return 0;
     if (selectedCourses.length === 2) return total * 0.05;
     if (selectedCourses.length === 3) return total * 0.10;
     return total * 0.15;
   };
 
-  const totalBeforeDiscount = calculateTotal();
+  const totalBeforeDiscount = calculateTotal();    //The IIE, 2024
   const discount = calculateDiscount(totalBeforeDiscount);
   const totalAfterDiscount = totalBeforeDiscount - discount;
-  const vat = totalAfterDiscount * 0.15; // VAT of 15%
+  const vat = totalAfterDiscount * 0.15;
   const finalTotal = totalAfterDiscount + vat;
 
-  return (
-    <View style={styles.container}>
+  return (    //The IIE, 2024
+    <View style={styles.container}>    devCamp[s.a.]
       <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Text style={styles.backButtonText}>Back</Text>
       </TouchableOpacity>
@@ -66,7 +66,7 @@ const SelectScreen = ({ navigation }) => {
         keyExtractor={(item) => item.id}
       />
 
-      <Text style={styles.categoryTitle}>Six-Week Courses</Text>
+      <Text style={styles.categoryTitle}>Six-Week Courses</Text>    
       <FlatList
         data={sixWeekCourses}
         renderItem={({ item }) => (
@@ -81,7 +81,7 @@ const SelectScreen = ({ navigation }) => {
 
       <Text style={styles.totalText}>Total: R{totalBeforeDiscount}</Text>
 
-      <Button
+      <Button    
         title="CheckOut"
         onPress={() => navigation.navigate('SignIn', {
           selectedCourses: selectedCourses.map(id => [...sixMonthCourses, ...sixWeekCourses].find(course => course.id === id)),
@@ -97,7 +97,7 @@ const SelectScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({    //The IIE, 2024
   container: {
     flex: 1,
     justifyContent: 'center',
