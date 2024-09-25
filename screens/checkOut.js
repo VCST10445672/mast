@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Button, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const CheckOutScreen = ({ navigation, route }) => {
+const CheckOutScreen = ({ navigation, route }) => {    //The IIE, 2024
   const { selectedCourses, totalBeforeDiscount, discount, totalAfterDiscount, vat, finalTotal, email, phone, name } = route.params;
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container}>    //The IIE, 2024
       <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Text style={styles.backButtonText}>Back</Text>
       </TouchableOpacity>
@@ -33,7 +33,7 @@ const CheckOutScreen = ({ navigation, route }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({    //The IIE, 2024
   container: {
     flex: 1,
     justifyContent: 'center',
