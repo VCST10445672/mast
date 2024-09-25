@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Button, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation }) => {    //The IIE, 2024
   return (
-    <View style={styles.container}>
+    <View style={styles.container}>    //The IIE, 2024
       <Image source={require('../images/logo.png')} style={styles.logo} />
       
       <TouchableOpacity style={styles.navButton} onPress={() => navigation.navigate('WeekSum')}>
@@ -27,7 +27,7 @@ const HomeScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({    //The IIE, 2024
   container: {
     flex: 1,
     justifyContent: 'center',
