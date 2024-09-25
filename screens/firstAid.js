@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Image, Text, Button } from 'react-native';
 
-const FirstAidScreen = ({ navigation }) => {
+const FirstAidScreen = ({ navigation }) => {    //The IIE, 2024
   return (
-    <View style={styles.container}>
+    <View style={styles.container}>    //The IIE, 2024
       <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Text style={styles.backButtonText}>Back</Text>
       </TouchableOpacity>
@@ -32,7 +32,7 @@ const FirstAidScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({    //The IIE, 2024
   container: {
     flex: 1,
     justifyContent: 'center',
