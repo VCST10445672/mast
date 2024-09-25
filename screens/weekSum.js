@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
 
-const WeekSumScreen = ({ navigation }) => {
+const WeekSumScreen = ({ navigation }) => {    //The IIE, 2024
   return (
-    <View style={styles.container}>
+    <View style={styles.container}>    //The IIE, 2024
       <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Text style={styles.backButtonText}>Back</Text>
       </TouchableOpacity>
@@ -35,7 +35,7 @@ const WeekSumScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({    //The IIE, 2024
   container: {
     flex: 1,
     justifyContent: 'center',
