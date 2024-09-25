@@ -15,9 +15,9 @@ import SewingScreen from './screens/sewing.js';
 import SignInScreen from './screens/signIn.js';
 import WeekSumScreen from './screens/weekSum.js';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();    //The IIE, 2024
 
-function App() {
+function App() {    //The IIE, 2024
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
