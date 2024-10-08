@@ -10,9 +10,9 @@ import HomeScreen from './screens/home';
 import AddScreen from './screens/add';
 import EditScreen from './screens/edit';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();    //The IIE, 2024
 
-function App() {
+function App() {    //The IIE, 2024
   return (
     <DishesProvider>
       <NavigationContainer>
