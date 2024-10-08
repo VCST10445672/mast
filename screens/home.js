@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';    //The IIE
 import { View, StyleSheet, Text, TouchableOpacity, Image, Alert, Modal, TextInput } from 'react-native';
 
-<<<<<<< HEAD
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation }) => {    //The IIE
   const [passwordModalVisible, setPasswordModalVisible] = useState(false);
   const [inputPassword, setInputPassword] = useState('');
   const [targetScreen, setTargetScreen] = useState('');
@@ -22,8 +21,8 @@ const HomeScreen = ({ navigation }) => {
     setInputPassword('');
   };
 
-  return (
-    <View style={styles.container}>
+  return (    //The IIE
+    <View style={styles.container}>    //The IIE
       <Text style={styles.mainTitle}>Today's Menu</Text>
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Starter</Text>
@@ -42,7 +41,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
         </View>
       </View>
-      <View style={styles.section}>
+      <View style={styles.section}>    //The IIE
         <Text style={styles.sectionTitle}>Main</Text>
         <View style={styles.course}>
           <Image source={require('../images/dinoNug.jpg')} style={styles.image} />
@@ -59,7 +58,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
         </View>
       </View>
-      <View style={styles.section}>
+      <View style={styles.section}>    //The IIE
         <Text style={styles.sectionTitle}>Dessert</Text>
         <View style={styles.course}>
           <Image source={require('../images/smile.jpg')} style={styles.image} />
@@ -69,8 +68,8 @@ const HomeScreen = ({ navigation }) => {
             <Text style={styles.description}>
               This dish captures the essiance of what makes the wold good. The chocolate topped waffle with a side of mapple syrup is sure to turn any frown that touches it into a smile.
             </Text>
-            <Text style={styles.description}>4g of Protein, 4300g of Calories and 500g of Fat.</Text>
-            <TouchableOpacity style={styles.changeButton} onPress={() => openPasswordModal('Deserts')}>
+            <Text style={styles.description}>4g of Protein, 4300g of Calories and 500g of Fat.</Text> 
+            <TouchableOpacity style={styles.changeButton} onPress={() => openPasswordModal('Deserts')}>    //pass
               <Text style={styles.changeText}>Change</Text>
             </TouchableOpacity>
           </View>
@@ -81,7 +80,7 @@ const HomeScreen = ({ navigation }) => {
         transparent={true}
         visible={passwordModalVisible}
         onRequestClose={() => setPasswordModalVisible(false)}
-      >
+      >    //password
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
             <Text style={styles.modalTitle}>Enter Admin Password</Text>
@@ -92,7 +91,7 @@ const HomeScreen = ({ navigation }) => {
               value={inputPassword}
               onChangeText={setInputPassword}
             />
-            <View style={styles.modalButtons}>
+            <View style={styles.modalButtons}>    //pass
               <TouchableOpacity style={styles.modalButton} onPress={handlePasswordSubmit}>
                 <Text style={styles.modalButtonText}>Submit</Text>
               </TouchableOpacity>
@@ -103,30 +102,6 @@ const HomeScreen = ({ navigation }) => {
           </View>
         </View>
       </Modal>
-=======
-const HomeScreen = ({ navigation }) => {    //The IIE, 2024
-  return (
-    <View style={styles.container}>    //The IIE, 2024
-      <Image source={require('../images/logo.png')} style={styles.logo} />
-      
-      <TouchableOpacity style={styles.navButton} onPress={() => navigation.navigate('WeekSum')}>
-        <Text style={styles.navButtonText}>Go to Week Summary</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.navButton} onPress={() => navigation.navigate('MonthSum')}>
-        <Text style={styles.navButtonText}>Go to Month Summary</Text>
-      </TouchableOpacity>
-      
-      <Text style={styles.title}>About Us</Text>
-      <Text style={styles.description}>
-        Empowering a nation means helping it grow stronger in its economy, society, and politics. This involves giving all citizens the tools, knowledge, and opportunities they need to participate fully in the nation's development. It's about more than just economic growth; it includes creating a sense of belonging, equality, and cultural richness. By investing in education, healthcare, infrastructure, and innovation, a nation aims to improve people's lives and encourage personal growth. It also means ensuring that everyone has fair access to resources and opportunities, eliminating unfairness, and valuing different perspectives. In essence, empowering a nation is about building a resilient, progressive, and self-reliant society that can shape its own future. This involves teaching people values that help them live fulfilling lives while contributing to the society's shared goals. Investing in education is crucial for empowering a nation, as it equips people with the skills they need for success. Promoting gender equality, protecting human rights, ensuring good governance, and fostering peace and security are also essential for a strong and prosperous nation.
-      </Text>
-
-      <Text style={styles.contactTitle}>CONTACT DETAILS:</Text>
-      <Text style={styles.contactInfo}>• TEL: (012) 942-5457</Text>
-      <Text style={styles.contactInfo}>• WHATSAPP: (087) 015-5546</Text>
-      <Text style={styles.contactInfo}>• EMAIL: info@empowernation.com</Text>
->>>>>>> 5bb3547fcd725b0b2d02ba67d67c4fc4653584c2
     </View>
   );
 };
