@@ -1,8 +1,8 @@
-import React, { useState } from 'react';    //The IIE
+import React, { useState } from 'react';    //The IIE, 2024
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';    //checkbox
 
-const EditScreen = ({ navigation }) => {    //The IIE
+const EditScreen = ({ navigation }) => {    //The IIE, 2024
   const [dishName, setDishName] = useState("Dish Name");
   const [dishPrice, setDishPrice] = useState("R 100.00");
   const [dishDescription, setDishDescription] = useState("Description of the dish");
@@ -24,8 +24,8 @@ const EditScreen = ({ navigation }) => {    //The IIE
     navigation.goBack();
   };
 
-  return (    //The IIE
-    <View style={styles.container}>    //The IIE
+  return (    //The IIE, 2024
+    <View style={styles.container}>    //The IIE, 2024
       <Text style={styles.title}>Edit Dish</Text>
       <View style={styles.imageUpload}>
         <Image source={require('../images/placeholder.png')} style={styles.image} />
@@ -67,7 +67,7 @@ const EditScreen = ({ navigation }) => {    //The IIE
   );
 };
 
-const styles = StyleSheet.create({    //The IIE
+const styles = StyleSheet.create({    //The IIE, 2024
   container: {
     flex: 1,
     padding: 20,
