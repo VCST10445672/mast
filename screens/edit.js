@@ -1,6 +1,6 @@
 import React, { useState } from 'react';    //The IIE, 2024
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import CheckBox from '@react-native-community/checkbox';    //checkbox
+import CheckBox from '@react-native-community/checkbox';    //React Native. 2024
 
 const EditScreen = ({ navigation }) => {    //The IIE, 2024
   const [dishName, setDishName] = useState("Dish Name");
@@ -10,7 +10,7 @@ const EditScreen = ({ navigation }) => {    //The IIE, 2024
   const [isMain, setIsMain] = useState(false);
   const [isDessert, setIsDessert] = useState(false);
 
-  const handleSave = () => {    //save
+  const handleSave = () => {  
     console.log("Saved Dish Details:", {
       name: dishName,
       price: dishPrice,
@@ -32,7 +32,7 @@ const EditScreen = ({ navigation }) => {    //The IIE, 2024
         <Text style={styles.addImageText}>Edit Image</Text>
       </View>
       <View style={styles.checkboxContainer}>
-        <CheckBox value={isStarter} onValueChange={setIsStarter} />
+        <CheckBox value={isStarter} onValueChange={setIsStarter} />    //React Native. 2024
         <Text style={styles.checkboxLabel}>Starter</Text>
         <CheckBox value={isMain} onValueChange={setIsMain} />
         <Text style={styles.checkboxLabel}>Main</Text>
