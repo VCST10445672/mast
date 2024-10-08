@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';    //The IIE
 import { View, StyleSheet, TouchableOpacity, Image, Text, ScrollView } from 'react-native';
-import { mainsInfo } from '../screens/dishes.js';
+import { mainsInfo } from '../screens/dishes.js';        //The IIE
 
-const MainsScreen = ({ navigation }) => {
+const MainsScreen = ({ navigation }) => {    //The IIE
   const [dishes, setDishes] = useState([]);
   useEffect(() => {
     setDishes(mainsInfo);
   }, []);
 
-  const handleRemove = (id) => {
+  const handleRemove = (id) => {    //The IIE
     setDishes(prevDishes => prevDishes.filter(dish => dish.id !== id));
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container}>    //The IIE
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
           <Text style={styles.backButtonText}>Back</Text>
@@ -23,8 +23,8 @@ const MainsScreen = ({ navigation }) => {
           <Text style={styles.addButtonText}>ADD</Text>
         </TouchableOpacity>
       </View>
-      <ScrollView>
-        {dishes.map((dish) => (
+      <ScrollView>    //The IIE
+        {dishes.map((dish) => (    //The IIE
           <View key={dish.id} style={styles.dishContainer}>
             <Image source={require('../images/placeholder.png')} style={styles.image} />
             <View style={styles.dishDetails}>
@@ -47,7 +47,7 @@ const MainsScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({    //The IIE
   container: {
     flex: 1,
     padding: 10,
