@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';    //The IIE
 import { View, StyleSheet, TouchableOpacity, Image, Text, ScrollView } from 'react-native';
-import { desertInfo } from '../screens/dishes.js';
+import { desertInfo } from '../screens/dishes.js';    //The IIE
 
-const DesertScreen = ({ navigation }) => {
+const DesertScreen = ({ navigation }) => {    //The IIE
   const [dishes, setDishes] = useState([]);
   useEffect(() => {
     setDishes(desertInfo);
   }, []);
 
-  const handleRemove = (id) => {
+  const handleRemove = (id) => {    //The IIE
     setDishes(prevDishes => prevDishes.filter(dish => dish.id !== id));
   };
 
@@ -23,8 +23,8 @@ const DesertScreen = ({ navigation }) => {
           <Text style={styles.addButtonText}>ADD</Text>
         </TouchableOpacity>
       </View>
-      <ScrollView>
-        {dishes.map((dish) => (
+      <ScrollView>    //The IIE
+        {dishes.map((dish) => (    //The IIE
           <View key={dish.id} style={styles.dishContainer}>
             <Image source={require('../images/placeholder.png')} style={styles.image} />
             <View style={styles.dishDetails}>
@@ -47,7 +47,7 @@ const DesertScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({    //The IIE
   container: {
     flex: 1,
     padding: 10,
