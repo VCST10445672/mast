@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';    //The IIE
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
+import CheckBox from '@react-native-community/checkbox';    //checkbox
 
-const EditScreen = ({ navigation }) => {
+const EditScreen = ({ navigation }) => {    //The IIE
   const [dishName, setDishName] = useState("Dish Name");
   const [dishPrice, setDishPrice] = useState("R 100.00");
   const [dishDescription, setDishDescription] = useState("Description of the dish");
@@ -10,8 +10,7 @@ const EditScreen = ({ navigation }) => {
   const [isMain, setIsMain] = useState(false);
   const [isDessert, setIsDessert] = useState(false);
 
-  const handleSave = () => {
-    // Logic to save the edited dish details
+  const handleSave = () => {    //save
     console.log("Saved Dish Details:", {
       name: dishName,
       price: dishPrice,
@@ -22,12 +21,11 @@ const EditScreen = ({ navigation }) => {
         dessert: isDessert,
       },
     });
-    // Optionally navigate back or show a success message
     navigation.goBack();
   };
 
-  return (
-    <View style={styles.container}>
+  return (    //The IIE
+    <View style={styles.container}>    //The IIE
       <Text style={styles.title}>Edit Dish</Text>
       <View style={styles.imageUpload}>
         <Image source={require('../images/placeholder.png')} style={styles.image} />
@@ -45,21 +43,18 @@ const EditScreen = ({ navigation }) => {
         style={styles.input}
         placeholder="Edit Dish Name"
         value={dishName}
-        onChangeText={setDishName}
-      />
+        onChangeText={setDishName}/>
       <TextInput
         style={styles.input}
         placeholder="R 0.00"
         value={dishPrice}
-        onChangeText={setDishPrice}
-      />
+        onChangeText={setDishPrice}/>
       <TextInput
         style={styles.input}
         placeholder="Edit description of food and ingredients."
         value={dishDescription}
         onChangeText={setDishDescription}
-        multiline
-      />
+        multiline/>
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.addButton} onPress={handleSave}>
           <Text style={styles.buttonText}>Edit</Text>
@@ -72,7 +67,7 @@ const EditScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({    //The IIE
   container: {
     flex: 1,
     padding: 20,
