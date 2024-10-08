@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';    
 import { View, StyleSheet, TouchableOpacity, Image, Text, ScrollView } from 'react-native';
-import { startersInfo } from '../screens/dishes.js'; //The IIE
+import { startersInfo } from '../screens/dishes.js'; //The IIE, 2024
 
 const StarterScreen = ({ navigation }) => {
   const [dishes, setDishes] = useState([]);
@@ -8,12 +8,12 @@ const StarterScreen = ({ navigation }) => {
     setDishes(startersInfo);
   }, []);
 
-  const handleRemove = (id) => {    //The IIE
+  const handleRemove = (id) => {    //The IIE, 2024
     setDishes(prevDishes => prevDishes.filter(dish => dish.id !== id));
   };
 
-  return (  //The IIE
-    <View style={styles.container}>  //The IIE
+  return (  //The IIE, 2024
+    <View style={styles.container}>  //The IIE, 2024
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
           <Text style={styles.backButtonText}>Back</Text>
@@ -24,7 +24,7 @@ const StarterScreen = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       <ScrollView>
-        {dishes.map((dish) => (    //The IIE
+        {dishes.map((dish) => (    //The IIE, 2024
           <View key={dish.id} style={styles.dishContainer}>
             <Image source={require('../images/placeholder.png')} style={styles.image} />
             <View style={styles.dishDetails}>
@@ -47,7 +47,7 @@ const StarterScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({    //The IIE
+const styles = StyleSheet.create({    //The IIE, 2024
   container: {
     flex: 1,
     padding: 10,
