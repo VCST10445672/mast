@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';    //The IIE
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
-import { useDishes } from '../screens/dishContext.js';
+import { useDishes } from '../screens/dishContext.js';    //The IIE
 
-const AddScreen = ({ navigation }) => {
+const AddScreen = ({ navigation }) => {    //The IIE
   const { addDish } = useDishes();
   const [dishName, setDishName] = useState('');
   const [dishPrice, setDishPrice] = useState('');
@@ -12,7 +12,7 @@ const AddScreen = ({ navigation }) => {
   const [isMain, setIsMain] = useState(false);
   const [isDessert, setIsDessert] = useState(false);
 
-  const handleAddDish = () => {
+  const handleAddDish = () => {    //The IIE
     const newDish = {
       id: Math.random(),
       name: dishName,
@@ -23,9 +23,9 @@ const AddScreen = ({ navigation }) => {
     addDish(newDish);
     navigation.goBack();
   };
-
+    //The IIE
   return (
-    <View style={styles.container}>
+    <View style={styles.container    //The IIE
       <Text style={styles.title}>Add Dish</Text>
       <View style={styles.imageUpload}>
         <Image source={require('../images/placeholder.png')} style={styles.image} />
@@ -70,7 +70,7 @@ const AddScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({    //The IIE
   container: {
     flex: 1,
     padding: 20,
