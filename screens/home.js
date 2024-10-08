@@ -69,7 +69,7 @@ const HomeScreen = ({ navigation }) => {    //The IIE, 2024
               This dish captures the essiance of what makes the wold good. The chocolate topped waffle with a side of mapple syrup is sure to turn any frown that touches it into a smile.
             </Text>
             <Text style={styles.description}>4g of Protein, 4300g of Calories and 500g of Fat.</Text> 
-            <TouchableOpacity style={styles.changeButton} onPress={() => openPasswordModal('Deserts')}>    //pass
+            <TouchableOpacity style={styles.changeButton} onPress={() => openPasswordModal('Deserts')}>    //The Web Designer. 2024
               <Text style={styles.changeText}>Change</Text>
             </TouchableOpacity>
           </View>
@@ -80,7 +80,7 @@ const HomeScreen = ({ navigation }) => {    //The IIE, 2024
         transparent={true}
         visible={passwordModalVisible}
         onRequestClose={() => setPasswordModalVisible(false)}
-      >    //password
+      >    //The Web Designer. 2024
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
             <Text style={styles.modalTitle}>Enter Admin Password</Text>
@@ -91,7 +91,7 @@ const HomeScreen = ({ navigation }) => {    //The IIE, 2024
               value={inputPassword}
               onChangeText={setInputPassword}
             />
-            <View style={styles.modalButtons}>    //pass
+            <View style={styles.modalButtons}>    //The Web Designer. 2024
               <TouchableOpacity style={styles.modalButton} onPress={handlePasswordSubmit}>
                 <Text style={styles.modalButtonText}>Submit</Text>
               </TouchableOpacity>
