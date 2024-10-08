@@ -1,7 +1,7 @@
-import React, { useState } from 'react';    //The IIE
+import React, { useState } from 'react';    //The IIE, 2024
 import { View, StyleSheet, Text, TouchableOpacity, Image, Alert, Modal, TextInput } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {    //The IIE
+const HomeScreen = ({ navigation }) => {    //The IIE, 2024
   const [passwordModalVisible, setPasswordModalVisible] = useState(false);
   const [inputPassword, setInputPassword] = useState('');
   const [targetScreen, setTargetScreen] = useState('');
@@ -21,8 +21,8 @@ const HomeScreen = ({ navigation }) => {    //The IIE
     setInputPassword('');
   };
 
-  return (    //The IIE
-    <View style={styles.container}>    //The IIE
+  return (    //The IIE, 2024
+    <View style={styles.container}>    //The IIE, 2024
       <Text style={styles.mainTitle}>Today's Menu</Text>
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Starter</Text>
@@ -41,7 +41,7 @@ const HomeScreen = ({ navigation }) => {    //The IIE
           </View>
         </View>
       </View>
-      <View style={styles.section}>    //The IIE
+      <View style={styles.section}>    //The IIE, 2024
         <Text style={styles.sectionTitle}>Main</Text>
         <View style={styles.course}>
           <Image source={require('../images/dinoNug.jpg')} style={styles.image} />
@@ -58,7 +58,7 @@ const HomeScreen = ({ navigation }) => {    //The IIE
           </View>
         </View>
       </View>
-      <View style={styles.section}>    //The IIE
+      <View style={styles.section}>    //The IIE, 2024
         <Text style={styles.sectionTitle}>Dessert</Text>
         <View style={styles.course}>
           <Image source={require('../images/smile.jpg')} style={styles.image} />
