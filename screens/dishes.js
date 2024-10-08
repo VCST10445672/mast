@@ -1,4 +1,4 @@
-const desertInfo = [    //The IIE
+const desertInfo = [    //The IIE, 2024
   { id: 1,
     name: "Dish 1",
     price: "R15.50",
@@ -25,7 +25,7 @@ const desertInfo = [    //The IIE
     description: "Description of Dish 5",
   },
 ];
-const startersInfo = [    //The IIE
+const startersInfo = [    //The IIE, 2024
   { id: 1,
     name: "Starter Dish 1",
     price: "R15.50",
@@ -53,7 +53,7 @@ const startersInfo = [    //The IIE
   },
 ]
 
-const mainsInfo = [    //The IIE
+const mainsInfo = [    //The IIE, 2024
   { id: 1,
     name: "Main Dish 1",
     price: "R15.50",
@@ -80,4 +80,4 @@ const mainsInfo = [    //The IIE
     description: "Description of Main Dish 5",
   },
 ];
-export { desertInfo, startersInfo, mainsInfo };    //The IIE
+export { desertInfo, startersInfo, mainsInfo };    //The IIE, 2024
